@@ -5,3 +5,37 @@
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+.display-font {
+  color: #0F172A;
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 60px;
+}
+
+.display-font-gradient {
+  /* 100% */
+  letter-spacing: -1.5px;
+  background: linear-gradient(90deg, #FF5722 0%, #D81B7E 50%, #7C3AED 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 60px;
+  letter-spacing: -1.5px;
+}
+
+.paragraph-font {
+  color: #475569;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.25px;
+  /* 162.5% */
+}
