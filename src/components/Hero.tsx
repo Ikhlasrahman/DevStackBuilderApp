@@ -9,7 +9,7 @@ const Hero = () => {
                 <p className="paragraph-font">Explore frontend, backend, database, and tooling options,
                     compare them side by side, and put together the stack that fits your
                     next project.</p>
-                <div className="flex mt-12 gap-4"><button className="btn text-white bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] p-6">ExploreTechnologies</button>
+                <div className="flex mt-12 gap-4"><button className="btn text-white bg-linear-to-r from-orange-500 to-pink-500  p-6">ExploreTechnologies</button>
                     <button className="btn btn-outline p-6">Learn More</button></div>
             </div>
             <div className="col-span-6 flex items-center justify-center p-8">

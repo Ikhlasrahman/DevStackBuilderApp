@@ -37,5 +37,48 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 29.25px;
-  /* 162.5% */
+}
+
+.explore-tech {
+  color: #0F172A;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.9px;
+}
+
+.word-linear {
+  background: linear-gradient(90deg, #EC4899 0%, #8B5CF6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.9px;
+}
+
+.links-title {
+  color: #0F172A;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  /* 133.333% */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.list-links {
+  color: #64748B;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
 }
