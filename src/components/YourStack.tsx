@@ -1,11 +1,20 @@
 import type { TechnologiesType } from "../types";
 import { X } from 'lucide-react';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 interface YourStackProps {
     stack: TechnologiesType[];
+    onRemove: (id: string) => void;
+    onRemoveAll : () => void;
+
 }
-function YourStack({ stack }: YourStackProps) {
+function YourStack({ stack, onRemove, onRemoveAll }: YourStackProps) {
+
+    const notify = () => toast("Stack is removed");
+    const notify2 = () => toast("All Stack is removed");
+
+
     return (
         <div className="h-fit rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
 
@@ -38,15 +47,21 @@ function YourStack({ stack }: YourStackProps) {
                         </p>
                     </div>
 
-                    <button className="text-xl text-slate-400">
+                    <button
+                        className="text-xl text-slate-400" onClick={() => { onRemove(technology.id), notify() }}>
                         <X />
                     </button>
+
                 </div>
             ))}
-
+            <ToastContainer />
             <button
                 type="button"
                 className="w-full rounded-lg border border-rose-400 py-1.5 text-sm font-semibold text-red-600"
+                onClick={() => {
+                    onRemoveAll();
+                    notify2();
+                }}
             >
                 Remove All
             </button>

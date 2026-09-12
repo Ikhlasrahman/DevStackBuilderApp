@@ -3,7 +3,7 @@ import '../index.css'
 
 const Navbar = () => {
     return (
-        <div className="w-full border-b border-gray-200">
+        <div className="w-full border-b border-gray-200 sticky top-0 z-50 bg-white">
             <div className="container mx-auto">
                 <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
                 <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>

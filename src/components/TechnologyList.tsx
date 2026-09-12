@@ -16,6 +16,16 @@ export default function TechnologyList({ technologiesPromise, }: TechnologyListP
   function handleAddToStack(technology: TechnologiesType) {
     setStack((previousStack: TechnologiesType[]) => [...previousStack, technology]);
   }
+
+  function handleRemoveStack(id:string){
+    const remove = stack.filter((c)=>c.id !== id);
+    setStack(remove)
+  }
+
+  function handleRemoveAllStack(){
+    setStack([]);
+  }
+
   return (
     <div className="container mx-auto p-8">
       {/* Heading */}
@@ -38,7 +48,7 @@ export default function TechnologyList({ technologiesPromise, }: TechnologyListP
           ))}
         </div>
 
-        <YourStack stack={stack} />
+        <YourStack stack={stack} onRemove={handleRemoveStack} onRemoveAll={handleRemoveAllStack}/>
       </div>
     </div>
   );

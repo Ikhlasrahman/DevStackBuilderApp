@@ -1,4 +1,5 @@
 
+import  { useState } from 'react';
 import type {TechnologiesType} from '../types'
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -8,6 +9,8 @@ type TechnologyCardProps = {
 };
 
 function TechnologyCard({technology, onAddToStack}: TechnologyCardProps) {
+    const [isAdded,setIsAdded]= useState(false);
+
     const notify = () => toast(" Added to stack!");
     return (
         <div>
@@ -62,14 +65,17 @@ function TechnologyCard({technology, onAddToStack}: TechnologyCardProps) {
 
               {/* Button */}
               <button
+                disabled={isAdded}
                 type="button"
                 className="w-full rounded-xl bg-gray-900 px-4 py-3 text-sm font-medium text-white transition hover:bg-gray-800"
                 onClick={() => {
                   onAddToStack(technology);
+                  setIsAdded(true);
                   notify();
                 }}
               >
-                Add to Stack
+                {isAdded?'Added':'Add to Stack'}
+
               </button>
               <ToastContainer />
             </div>
