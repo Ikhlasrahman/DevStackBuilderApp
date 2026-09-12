@@ -17,12 +17,12 @@ export default function TechnologyList({ technologiesPromise, }: TechnologyListP
     setStack((previousStack: TechnologiesType[]) => [...previousStack, technology]);
   }
 
-  function handleRemoveStack(id:string){
-    const remove = stack.filter((c)=>c.id !== id);
+  function handleRemoveStack(id: string) {
+    const remove = stack.filter((c) => c.id !== id);
     setStack(remove)
   }
 
-  function handleRemoveAllStack(){
+  function handleRemoveAllStack() {
     setStack([]);
   }
 
@@ -44,16 +44,16 @@ export default function TechnologyList({ technologiesPromise, }: TechnologyListP
         {/* LEFT — Technology Cards */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-3">
           {technologies.map((technology) => (
-            <TechnologyCard 
-            key={technology.id} 
-              technology={technology} 
-              onAddToStack={handleAddToStack} 
-              isAdded={stack.some((item)=>item.id===technology.id)}
-              />
+            <TechnologyCard
+              key={technology.id}
+              technology={technology}
+              onAddToStack={handleAddToStack}
+              isAdded={stack.some((item) => item.id === technology.id)}
+            />
           ))}
         </div>
 
-        <YourStack stack={stack} onRemove={handleRemoveStack} onRemoveAll={handleRemoveAllStack}/>
+        <YourStack stack={stack} onRemove={handleRemoveStack} onRemoveAll={handleRemoveAllStack} />
       </div>
     </div>
   );

@@ -69,7 +69,7 @@ function TechnologyCard({ technology, onAddToStack, isAdded }: TechnologyCardPro
                     disabled={isAdded}
                     type="button"
                     className={`w-full rounded-xl px-4 py-3 text-sm font-medium text-white transition 
-                        ${isAdded?"btn-disabled":"btn btn-neutral"} hover:bg-gray-800"`}
+                        ${isAdded ? "btn-disabled" : "btn btn-neutral"} hover:bg-gray-800"`}
                     onClick={() => {
                         console.log("isAdded:", isAdded);
                         onAddToStack(technology);
