@@ -44,7 +44,12 @@ export default function TechnologyList({ technologiesPromise, }: TechnologyListP
         {/* LEFT — Technology Cards */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-3">
           {technologies.map((technology) => (
-            <TechnologyCard key={technology.id} technology={technology} onAddToStack={handleAddToStack} />
+            <TechnologyCard 
+            key={technology.id} 
+              technology={technology} 
+              onAddToStack={handleAddToStack} 
+              isAdded={stack.some((item)=>item.id===technology.id)}
+              />
           ))}
         </div>
 
